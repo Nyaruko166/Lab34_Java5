@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class MonHoc {
-    
+
     private String maMon;
 
     private String tenMon;
@@ -17,7 +17,7 @@ public class MonHoc {
 
     private String chuyenNganh;
 
-    private String[] giangVien;
+    private String giangVien;
 
     private Boolean batBuoc;
 }
