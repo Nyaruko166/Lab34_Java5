@@ -6,10 +6,7 @@ import com.example.lab34.service.MonHocService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,12 +24,12 @@ public class MonHocController {
         return "/bai1/bai-1";
     }
 
-    @GetMapping("/testView")
-    public String loadTblTest(Model model) {
+//    @GetMapping("/testView")
+//    public String loadTblTest(Model model) {
 //        List<MonHoc> lstMH = monHocService.getAll();
 //        model.addAttribute("lstMH", lstMH);
-        return "/bai1/test";
-    }
+//        return "/bai1/test";
+//    }
 
     @PostMapping("/add")
     public String addMH(Model model,
@@ -46,7 +43,7 @@ public class MonHocController {
         StringBuilder sb = new StringBuilder();
         String giangVien = null;
         if (arrCkb != null) {
-            // ForEach các chẹcbox được chọn
+            // ForEach các chẹckbox được chọn
             for (String value : arrCkb) {
                 if (sb.length() == 0) {
                     sb.append(value);
@@ -57,6 +54,14 @@ public class MonHocController {
             giangVien = sb.toString();
         }
         monHocService.addMH(new MonHoc(maMon, tenMon, soTinChi, chuyenNganh, giangVien, batBuoc));
+        return "redirect:/lab34/bai-1";
+    }
+
+    @GetMapping("/delete/{maMH}")
+    public String deleteMH(Model model,
+                           @PathVariable("maMH") String maMH
+    ) {
+        monHocService.deleteMH(monHocService.findOne(maMH));
         return "redirect:/lab34/bai-1";
     }
 

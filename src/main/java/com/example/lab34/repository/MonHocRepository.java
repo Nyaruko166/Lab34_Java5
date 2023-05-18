@@ -34,4 +34,14 @@ public class MonHocRepository implements IMonHocRepository {
     public void deleteMH(MonHoc mh) {
         lstMH.remove(mh);
     }
+
+    @Override
+    public MonHoc findOne(String maMH) {
+        for (MonHoc x : lstMH) {
+            if (x.getMaMon().equals(maMH)) {
+                return x;
+            }
+        }
+        return null;
+    }
 }

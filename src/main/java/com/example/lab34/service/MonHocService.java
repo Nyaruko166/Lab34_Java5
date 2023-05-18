@@ -27,4 +27,9 @@ public class MonHocService implements IMonHocService {
     public void deleteMH(MonHoc mh) {
         monHocRepository.deleteMH(mh);
     }
+
+    @Override
+    public MonHoc findOne(String maMH) {
+        return monHocRepository.findOne(maMH);
+    }
 }

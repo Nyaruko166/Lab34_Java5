@@ -11,4 +11,6 @@ public interface IMonHocRepository {
     void addMH(MonHoc mh);
 
     void deleteMH(MonHoc mh);
+
+    MonHoc findOne(String maMH);
 }
