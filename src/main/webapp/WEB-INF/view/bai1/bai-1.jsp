@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Bootstrap demo</title>
+    <title>Bài 1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
@@ -80,7 +80,7 @@
             <div class="col-6">
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="batBuoc" id="flexRadioDefault1" value="false"
-                           >
+                    >
                     <label class="form-check-label" for="flexRadioDefault1">
                         Không
                     </label>
@@ -90,7 +90,7 @@
     </div>
     <div class="col-md-12 text-center">
         <button type="submit" class="btn btn-success">Thêm</button>
-        <%--        <a href="http://localhost:27325" class="btn btn-success">Trang Chủ</a>--%>
+        <a href="http://localhost:27325/lab34/bai-2" class="btn btn-success">Bài 2</a>
     </div>
 </form>
 <section class="container">
