@@ -54,7 +54,7 @@ public class LoaController {
         Loa loa = service.findOne(maLoa);
         model.addAttribute("loa", loa);
         model.addAttribute("lstLoa", lstLoa);
-//        loaUp = loa;
+        loaUp = loa;
         return "/bai2/bai-2";
     }
 
